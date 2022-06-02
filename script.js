@@ -4,8 +4,6 @@ async function getVal() {
 let user_stock = await document.getElementById("stock").value;
 
 const chartProperties = {
-  width: 1500,
-  height: 600,
   timeScale: {
     timeVisible:true,
     secondsVisible:false,
@@ -14,6 +12,7 @@ const chartProperties = {
 
 const domElement = document.getElementById("myChart");
 const chart = LightweightCharts.createChart(domElement, chartProperties);
+
 
 const candleSeries = chart.addCandlestickSeries();
 
