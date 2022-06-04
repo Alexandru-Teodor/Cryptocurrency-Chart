@@ -1,4 +1,3 @@
-
 function show(option) {
     document.querySelector('.textBox').value = option;
 }

@@ -16,7 +16,6 @@
 fieldset {
     display: flex;
     justify-content: space-between;
-    /* padding: 0.5rem; */
 }
 
 .dropdown {
@@ -59,8 +58,6 @@ fieldset {
     border: none;
     outline: none;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    /* padding: 12px; */
-    /* border-radius: 10px; */
 }
 
 .dropdown.active .option {

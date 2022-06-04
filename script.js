@@ -1,6 +1,5 @@
 document.getElementById("btnGet").addEventListener('click', getVal);
 
-
 async function getVal() {
 let user_stock = await document.getElementById("stock").value;
 
@@ -15,7 +14,6 @@ const chartProperties = {
 
 const domElement = document.getElementById("myChart");
 const chart = LightweightCharts.createChart(domElement, chartProperties);
-
 
 const candleSeries = chart.addCandlestickSeries();
 
