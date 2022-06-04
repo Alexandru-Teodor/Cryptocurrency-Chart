@@ -12,14 +12,40 @@
     <fieldset>
         <legend>Enter a cryptocurrency</legend>
         <input type = "text" id = "stock" placeholder="Coin paired with USD">
+
+        <div class = "dropdown">
+            <input type="text" id = "interval" class = "textBox" placeholder = "Interval" readonly>
+            <div class = "option">
+                <div onclick = "show('1m')">1m</div>
+                <div onclick = "show('3m')">3m</div>
+                <div onclick = "show('5m')">5m</div>
+                <div onclick = "show('15m')">15m</div>
+                <div onclick = "show('30m')">30m</div>
+                <div onclick = "show('1h')">1h</div>
+                <div onclick = "show('2h')">2h</div>
+                <div onclick = "show('4h')">4h</div>
+                <div onclick = "show('6h')">6h</div>
+                <div onclick = "show('8h')">8h</div>
+                <div onclick = "show('12h')">12h</div>
+                <div onclick = "show('1d')">1d</div>
+                <div onclick = "show('3d')">3d</div>
+                <div onclick = "show('1w')">1w</div>
+                <div onclick = "show('1M')">1M</div>
+            </div>
+        </div>
+
+
         <button type="button" id="btnGet">Draw Chart</button>
     </fieldset>
     </div>
+
+
 
     <div id = "myChart">
     </div>
        
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script src = "drop-down-menu.js"> </script>
     <script src = "script.js"> </script>
 </body>
 </html>

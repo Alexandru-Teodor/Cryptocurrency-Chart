@@ -1,7 +1,10 @@
 document.getElementById("btnGet").addEventListener('click', getVal);
 
+
 async function getVal() {
 let user_stock = await document.getElementById("stock").value;
+
+let interval = document.getElementById("interval").value;
 
 const chartProperties = {
   timeScale: {
@@ -16,7 +19,7 @@ const chart = LightweightCharts.createChart(domElement, chartProperties);
 
 const candleSeries = chart.addCandlestickSeries();
 
-fetch(`https://api.binance.com/api/v3/klines?symbol=${user_stock}USDT&interval=1m&limit=1000`)
+fetch(`https://api.binance.com/api/v3/klines?symbol=${user_stock}USDT&interval=${interval}&limit=1000`)
   .then(res => res.json())
   .then(data => {
     const cdata = data.map(d => {
