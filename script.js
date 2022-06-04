@@ -1,8 +1,9 @@
-document.getElementById("btnGet").addEventListener('click', getVal);
+document.getElementById("btnGet").addEventListener('click', drawChart);
 
-async function getVal() {
+async function drawChart() {
   let user_stock = await document.getElementById("stock").value;
   let interval = document.getElementById("interval").value;
+
   const chartProperties = {
     timeScale: {
       timeVisible:true,
