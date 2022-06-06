@@ -18,6 +18,7 @@ fieldset {
     justify-content: space-between;
 }
 
+/* 
 .dropdown {
     position: relative;
     width:6rem;
@@ -83,4 +84,4 @@ fieldset {
 .dropdown .option div:hover {
     background: #62baea;
     color: #fff;
-}
+} */

@@ -1,8 +1,12 @@
 document.getElementById("btnGet").addEventListener('click', drawChart);
 
 async function drawChart() {
-  let user_stock = await document.getElementById("stock").value;
-  let interval = document.getElementById("interval").value;
+  let user_coin = await document.getElementById("coin").value;
+
+  
+
+  let aux = document.getElementById("interval");
+  let interval = aux.options[aux.selectedIndex].value;
 
   const chartProperties = {
     timeScale: {
@@ -13,9 +17,10 @@ async function drawChart() {
 
   const domElement = document.getElementById("myChart");
   const chart = LightweightCharts.createChart(domElement, chartProperties);
+  domElement.removeChild(domElement.firstChild);
   const candleSeries = chart.addCandlestickSeries();
 
-  fetch(`https://api.binance.com/api/v3/klines?symbol=${user_stock}USDT&interval=${interval}&limit=1000`)
+  fetch(`https://api.binance.com/api/v3/klines?symbol=${user_coin}USDT&interval=${interval}&limit=1000`)
     .then(res => res.json())
     .then(data => {
       const cdata = data.map(d => {
@@ -24,4 +29,6 @@ async function drawChart() {
       candleSeries.setData(cdata);
     })
     .catch(err => console.log(err));
+
+
 }
