@@ -3,8 +3,6 @@ document.getElementById("btnGet").addEventListener('click', drawChart);
 async function drawChart() {
   let user_coin = await document.getElementById("coin").value;
 
-  
-
   let aux = document.getElementById("interval");
   let interval = aux.options[aux.selectedIndex].value;
 
